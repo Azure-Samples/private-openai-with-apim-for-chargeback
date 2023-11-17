@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: chargeback_eventhub_trigger_function
+metadata:
+  template: chargeback_eventhub_trigger_function@0.0.1-beta
+services:
+  chargebackfunctionapp:
+    project: ./src/chargeback_eventhub_trigger_function
+    language: dotnet
+    host: function

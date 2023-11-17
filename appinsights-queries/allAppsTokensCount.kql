@@ -1,0 +1,10 @@
+customEvents
+| where name contains "Azure OpenAI Tokens"
+| extend tokenData = parse_json(customDimensions)
+| extend
+    AppKey = tokenData.AppKey,
+    PromptTokens = tokenData.PromptTokens,
+    CompletionTokens = tokenData.CompletionTokens,
+    TotalTokens = tokenData.TotalTokens
+| summarize PromptTokens = sum(toint(PromptTokens)) , CompletionTokens = sum(toint(CompletionTokens)), TotalTokens = sum(toint(TotalTokens)) by tostring(AppKey)
+| project strcat(substring(tostring(AppKey),0,8), "XXXX"), PromptTokens, CompletionTokens, TotalTokens

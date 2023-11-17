@@ -1,0 +1,11 @@
+customEvents
+| where name contains "Azure OpenAI Tokens"
+| extend tokenData = parse_json(customDimensions)
+| where tokenData.AppKey contains "107550056ae341ce97f57b123c45e816"
+| project    
+    Timestamp = tokenData.Timestamp,
+    Stream = tokenData.Stream,
+    ApiOperation = tokenData.ApiOperation,    
+    PromptTokens = tokenData.PromptTokens,
+    CompletionTokens = tokenData.CompletionTokens,
+    TotalTokens = tokenData.TotalTokens
