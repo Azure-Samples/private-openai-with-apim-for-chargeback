@@ -2,8 +2,8 @@
 
 ## How to file issues and get help
 
-We use [GitHub issues](https://github.com/Azure-Samples/private-openai-with-apim-for-chargeback) as an issue tracker for the repository. Firstly, please search in open issues and try to make sure your problem doesn't exist. If there is an issue, add your comments to this issue.
-If there are no issues yet, please open a new one.
+We use [GitHub issues](https://github.com/Azure-Samples/private-openai-with-apim-for-chargeback/issues) as an issue tracker for the repository. Firstly, please search in open issues and try to make sure your problem doesn't exist. If there is an issue, add your comments to this issue.
+If there are no issues yet, please open a new one. 
 
 ## Microsoft Support Policy
 
